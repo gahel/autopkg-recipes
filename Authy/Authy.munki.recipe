@@ -4,7 +4,6 @@
 <dict>
     <key>Description</key>
     <string>Downloads latest Authy Desktop and imports into munki.
-
     <key>Identifier</key>
     <string>com.github.gautehel.munki.Authy</string>
     <key>Input</key>
