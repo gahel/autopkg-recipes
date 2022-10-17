@@ -5,7 +5,7 @@
     <key>Description</key>
     <string>Downloads latest Authy Desktop and imports into munki.</string>
     <key>Identifier</key>
-    <string>com.github.gautehel.munki.Authy</string>
+    <string>com.github.gahel.munki.Authy</string>
     <key>Input</key>
     <dict>
         <key>NAME</key>
@@ -38,7 +38,7 @@
     <key>MinimumVersion</key>
     <string>2.4</string>
     <key>ParentRecipe</key>
-    <string>com.github.gautehel.download.Authy</string>
+    <string>com.github.gahel.download.Authy</string>
     <key>Process</key>
     <array>
         <dict>
