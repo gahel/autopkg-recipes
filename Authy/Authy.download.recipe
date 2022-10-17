@@ -7,7 +7,7 @@
 	<key>Description</key>
 	<string>Downloads the latest version of Authy Desktop.</string>
 	<key>Identifier</key>
-	<string>com.github.peetinc.download.AuthyDesktop</string>
+	<string>com.github.gahel.download.AuthyDesktop</string>
 	<key>Input</key>
 	<dict>
 		<key>NAME</key>
