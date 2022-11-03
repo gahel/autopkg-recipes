@@ -5,7 +5,7 @@
 	<key>Description</key>
 	<string>Downloads the current release version of Workspace ONE Intelligent Hub and imports into Munki.</string>
 	<key>Identifier</key>
-	<string>io.github.hjuutilainen.munki.WorkspaceONEIntelligentHub</string>
+	<string>io.github.gahel.munki.WorkspaceONEIntelligentHub</string>
 	<key>Input</key>
 	<dict>
 		<key>NAME</key>
@@ -43,7 +43,7 @@
 	<key>MinimumVersion</key>
 	<string>1.0.4</string>
 	<key>ParentRecipe</key>
-	<string>io.github.hjuutilainen.download.WorkspaceONEIntelligentHub</string>
+	<string>io.github.gahel.download.WorkspaceONEIntelligentHub</string>
 	<key>Process</key>
 	<array>
 		<dict>
