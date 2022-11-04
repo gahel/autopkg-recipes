@@ -9,7 +9,7 @@
 	<key>Input</key>
 	<dict>
 		<key>NAME</key>
-		<string>WorkspaceONEIntelligentHub</string>
+		<string>VMwareWorkspaceONEIntelligentHub</string>
 		<key>MUNKI_REPO_SUBDIR</key>
 		<string>apps/vmware</string>
 		<key>MUNKI_CATEGORY</key>
