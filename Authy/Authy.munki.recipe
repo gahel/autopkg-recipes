@@ -3,10 +3,9 @@
 <plist version="1.0">
 <dict>
     <key>Description</key>
-    <string>Downloads latest Authy Desktop and imports into munki.
-
+    <string>Downloads latest Authy Desktop and imports into munki.</string>
     <key>Identifier</key>
-    <string>com.github.gautehel.munki.Authy</string>
+    <string>com.github.gahel.munki.Authy</string>
     <key>Input</key>
     <dict>
         <key>NAME</key>
@@ -37,9 +36,9 @@
         </dict>
     </dict>
     <key>MinimumVersion</key>
-    <string>10.11</string>
+    <string>2.4</string>
     <key>ParentRecipe</key>
-    <string>com.github.nzmacgeek.download.authy</string>
+    <string>com.github.gahel.download.Authy</string>
     <key>Process</key>
     <array>
         <dict>
