@@ -5,16 +5,16 @@
 	<key>Description</key>
 	<string>Downloads the latest stable Arduino and creates flat *.pkg installer.</string>
 	<key>Identifier</key>
-	<string>io.github.gahel.pkg.arduino</string>
+	<string>io.github.gahel.pkg.arduinoIDE</string>
 	<key>Input</key>
 	<dict>
 		<key>NAME</key>
-		<string>Arduino</string>
+		<string>Arduino IDE</string>
 	</dict>
 	<key>MinimumVersion</key>
 	<string>1.0.4</string>
 	<key>ParentRecipe</key>
-	<string>io.github.gahel.download.arduino</string>
+	<string>io.github.gahel.download.arduinoIDE</string>
 	<key>Process</key>
 	<array>
 		<dict>
