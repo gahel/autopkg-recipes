@@ -5,11 +5,11 @@
 	<key>Description</key>
 	<string>Downloads the latest Arduino and imports into Munki.</string>
 	<key>Identifier</key>
-	<string>io.github.gahel.munki.arduinoIDE</string>
+	<string>io.github.gahel.munki.arduinoIDEarm64</string>
 	<key>Input</key>
 	<dict>
 		<key>NAME</key>
-		<string>Arduino IDE</string>
+		<string>Arduino IDE arm64</string>
         <key>MUNKI_REPO_SUBDIR</key>
         <string>apps/%NAME%</string>
 		<key>pkginfo</key>
@@ -36,12 +36,15 @@ https://www.arduino.cc/en/Guide/HomePage
 			<array>
 				<string>%NAME%</string>
 			</array>
+                        <array>
+                                <string>arm64</string>
+                        </array>
 		</dict>
 	</dict>
 	<key>MinimumVersion</key>
 	<string>1.0.2</string>
     <key>ParentRecipe</key>
-    <string>io.github.gahel.download.arduinoIDE</string>
+    <string>io.github.gahel.download.arduinoIDEarm64</string>
 	<key>Process</key>
 	<array>
 		<dict>

@@ -36,6 +36,9 @@ https://www.arduino.cc/en/Guide/HomePage
 			<array>
 				<string>%NAME%</string>
 			</array>
+                        <array>
+                                <string>x86_64</string>
+                        </array>
 		</dict>
 	</dict>
 	<key>MinimumVersion</key>
