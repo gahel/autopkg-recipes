@@ -36,6 +36,7 @@ https://www.arduino.cc/en/Guide/HomePage
 			<array>
 				<string>%NAME%</string>
 			</array>
+                        <key>supported_architectures</key>
                         <array>
                                 <string>arm64</string>
                         </array>
