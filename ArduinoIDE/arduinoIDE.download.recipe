@@ -41,15 +41,6 @@
 			<key>Processor</key>
 			<string>EndOfCheckPhase</string>
 		</dict>
-		<dict>
-			<key>Processor</key>
-			<string>Versioner</string>
-			<key>Arguments</key>
-			<dict>
-				<key>input_plist_path</key>
-				<string>%RECIPE_CACHE_DIR%/%NAME%/Arduino IDE.app/Contents/Info.plist</string>
-			</dict>
-		</dict>
         <dict>
             <key>Processor</key>
             <string>CodeSignatureVerifier</string>
