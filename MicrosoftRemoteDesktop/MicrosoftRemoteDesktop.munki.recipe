@@ -20,7 +20,7 @@
 			</array>
 			<key>catalogs</key>
 			<array>
-				<string>development-microsoft-MicrosoftRemoteDesktop</string>
+				<string>testing</string>
 			</array>
 			<key>category</key>
 			<string>Utility</string>
