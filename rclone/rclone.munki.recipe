@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE pkg-info PUBLIC "-//Apple Computer//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
-<pkg-info>
+<plist>
+<dict>
     <display_name>rclone</display_name>
     <name>rclone</name>
     <version>__VERSION__</version>
@@ -62,4 +63,5 @@ fi        </script>
         </script>
     </install_script>
     <install_script_type>postinstall</install_script_type>
-</pkg-info>
+</dict>
+</plis>
