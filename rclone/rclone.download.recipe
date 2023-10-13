@@ -1,4 +1,7 @@
-<recipe>
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
     <identifier>com.github.autopkg.download.rclone</identifier>
     <name>rclone</name>
     <description>AutoPkg recipe for downloading the latest version of rclone from GitHub releases.</description>
@@ -33,4 +36,5 @@
             <string>https://github.com/rclone/rclone/releases/download/v{version}/rclone-v{version}-mac-amd64.zip</string>
         </dict>
     </overrides>
-</recipe>
+</dict>
+</plist>
