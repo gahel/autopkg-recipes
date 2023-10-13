@@ -5,7 +5,7 @@
     <display_name>rclone</display_name>
     <name>rclone</name>
     <key>Identifier</key>
-    <string>com.github.gahel.munki.rclone</string>
+    <string>com.github.gahel.munki.UNrclone</string>
     <version>__VERSION__</version>
     <description>Command-line program to manage files on cloud storage.</description>
     <unattended_install>true</unattended_install>
