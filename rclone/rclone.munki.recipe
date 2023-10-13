@@ -1,1 +1,47 @@
-
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkg-info PUBLIC "-//Apple Computer//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<pkg-info>
+    <display_name>rclone</display_name>
+    <name>rclone</name>
+    <version>__VERSION__</version>
+    <description>Command-line program to manage files on cloud storage.</description>
+    <unattended_install>true</unattended_install>
+    <unattended_uninstall>true</unattended_uninstall>
+    <catalogs>testing</catalogs>
+    <installer_type>pkg</installer_type>
+    <minimum_os_version>10.14</minimum_os_version>
+    <requires>admin</requires>
+    <installcheck_script>
+        <script_type>python</script_type>
+        <script>
+            #!/usr/bin/python
+            if not 'rclone' in os.popen("/usr/local/bin/rclone --version").read():
+                print("Missing rclone")
+                exit(1)
+            exit(0)
+        </script>
+    </installcheck_script>
+    <installcheck_script_type>preinstall</installcheck_script_type>
+    <preinstall_script>
+        <script_type>python</script_type>
+        <script>
+            #!/usr/bin/python
+            if 'rclone' in os.popen("/usr/local/bin/rclone --version").read():
+                os.system("echo 'rclone already installed.' >> /var/log/munki.log")
+                exit(0)
+            exit(1)
+        </script>
+    </preinstall_script>
+    <preinstall_script_type>preinstall</preinstall_script_type>
+    <install_script>
+        <script_type>python</script_type>
+        <script>
+            #!/usr/bin/python
+            print("Installing rclone...")
+            os.system("cd /usr/local/bin && /usr/sbin/installer -pkg /Library/Managed\ Installs/Cache/rclone-latest.pkg -target /")
+            os.system("/usr/local/bin/rclone --version >> /var/log/munki.log")
+            exit(0)
+        </script>
+    </install_script>
+    <install_script_type>postinstall</install_script_type>
+</pkg-info>
