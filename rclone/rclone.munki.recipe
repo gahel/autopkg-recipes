@@ -51,14 +51,15 @@ fi        </script>
         </script>
     </preinstall_script>
     <preinstall_script_type>preinstall</preinstall_script_type>
-    <install_script>
-        <script_type>python</script_type>
+    <install_script>        
+        <script_type>bash</script_type>
         <script>
-            #!/usr/bin/python
-            print("Installing rclone...")
-            os.system("cd /usr/local/bin && /usr/sbin/installer -pkg /Library/Managed\ Installs/Cache/rclone-latest.pkg -target /")
-            os.system("/usr/local/bin/rclone --version >> /var/log/munki.log")
-            exit(0)
+            #!/bin/bash
+            echo "Installing rclone..."
+            cd /usr/local/bin
+            unzip -o -q /path/to/rclone-latest.zip
+            /usr/local/bin/rclone --version >> /var/log/munki.log
+            exit 0
         </script>
     </install_script>
     <install_script_type>postinstall</install_script_type>
