@@ -1,0 +1,36 @@
+<recipe>
+    <identifier>com.github.autopkg.download.rclone</identifier>
+    <name>rclone</name>
+    <description>AutoPkg recipe for downloading the latest version of rclone from GitHub releases.</description>
+    <input>
+        <URL>https://github.com/rclone/rclone/releases/latest</URL>
+    </input>
+    <processors>
+        <Processor>URLTextSearch</Processor>
+        <Processor>URLTextSearch</Processor>
+        <Processor>URLTextSearch</Processor>
+        <Processor>Repackager</Processor>
+        <Processor>FileMove</Processor>
+    </processors>
+    <overrides>
+        <key>URLTextSearch-1</key>
+        <dict>
+            <key>match</key>
+            <string>href="/rclone/rclone/releases/tag/v(.+?)"</string>
+            <key>index</key>
+            <integer>0</integer>
+        </dict>
+        <key>URLTextSearch-2</key>
+        <dict>
+            <key>match</key>
+            <string>https://github.com/rclone/rclone/releases/download/v{version}/rclone-v{version}-osx-amd64.zip</string>
+            <key>substitution</key>
+            <string>https://github.com/rclone/rclone/releases/download/v{version}/rclone-v{version}-mac-amd64.zip</string>
+        </dict>
+        <key>URLTextSearch-3</key>
+        <dict>
+            <key>match</key>
+            <string>https://github.com/rclone/rclone/releases/download/v{version}/rclone-v{version}-mac-amd64.zip</string>
+        </dict>
+    </overrides>
+</recipe>
