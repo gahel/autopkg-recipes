@@ -64,4 +64,4 @@ fi        </script>
     </install_script>
     <install_script_type>postinstall</install_script_type>
 </dict>
-</plis>
+</plist>
