@@ -5,7 +5,7 @@
 	<key>Description</key>
 	<string>Downloads, packages and imports the current release version of rclone into Munki</string>
 	<key>Identifier</key>
-	<string>com.github.andrewvalentine.munki.rclone</string>
+	<string>com.github.gahel.munki.rclone</string>
 	<key>Input</key>
 	<dict>
 		<key>NAME</key>
@@ -27,7 +27,7 @@
 	<key>MinimumVersion</key>
 	<string>0.2.9</string>
 	<key>ParentRecipe</key>
-	<string>com.github.andrewvalentine.pkg.rclone</string>
+	<string>com.github.gahel.pkg.rclone</string>
 	<key>Process</key>
 	<array>
 		<dict>
