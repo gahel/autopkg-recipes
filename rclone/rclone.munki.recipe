@@ -23,7 +23,6 @@ rcloneVersion_GitHub=$(curl -sL https://github.com/rclone/rclone/releases/latest
 
 echo "GitHub version: $rcloneVersion_GitHub"
 
-command -v rclone >/dev/null 2>&1 || { echo >&2 "Installerer rclone"; exit 1; }
 
 #if [ "$rcloneVersion" == "$rcloneVersion_GitHub" ]; then
 #    echo "Same and not different!!"
