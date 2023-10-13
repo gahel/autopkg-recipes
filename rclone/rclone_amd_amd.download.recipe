@@ -6,7 +6,7 @@
 	<key>Description</key>
 	<string>Downloads the latest version of rclone for amd64 and arm64</string>
 	<key>Identifier</key>
-	<string>com.github.gahel.download.rclone</string>
+	<string>com.github.gahel.download.rclone_amd_arm</string>
 	<key>Input</key>
 	<dict>
 		<key>NAME</key>

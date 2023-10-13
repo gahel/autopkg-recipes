@@ -5,7 +5,7 @@
 	<key>Description</key>
 	<string>Downloads, packages and installs the latest version of rclone</string>
 	<key>Identifier</key>
-	<string>com.github.gahel.install.rclone</string>
+	<string>com.github.gahel.install.rclone_amd_arm</string>
 	<key>Input</key>
 	<dict>
 		<key>NAME</key>
@@ -14,7 +14,7 @@
     <key>MinimumVersion</key>
     <string>0.2.9</string>
     <key>ParentRecipe</key>
-    <string>com.github.gahel.pkg.rclone</string>
+    <string>com.github.gahel.pkg.rclone_amd_arm</string>
     <key>Process</key>
     <array>
 			<dict>
