@@ -2,7 +2,7 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
-    <identifier>com.github.autopkg.download.rclone</identifier>
+    <identifier>com.github.gahel.download.UNrclone</identifier>
     <name>rclone</name>
     <description>AutoPkg recipe for downloading the latest version of rclone from GitHub releases.</description>
     <input>
