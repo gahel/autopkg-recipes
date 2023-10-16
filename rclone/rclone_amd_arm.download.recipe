@@ -25,7 +25,7 @@
 				<key>github_repo</key>
 				<string>ncw/rclone</string>
 				<key>asset_regex</key>
-				<string>rclone-v[0-9\.]*-osx-arm64.zip</string>
+				<string>rclone-v[0-9\.]*-osx-%ARCH%.zip</string>
 			</dict>
 		</dict>
   	        <dict>
@@ -47,7 +47,7 @@
 			<key>Arguments</key>
 			<dict>
 				<key>destination_path</key>
-				<string>%RECIPE_CACHE_DIR%/downloads/</string>
+				<string>%RECIPE_CACHE_DIR%/downloads/%NAME%_%ARCH%/</string>
 			</dict>
 		</dict>
 	</array>
