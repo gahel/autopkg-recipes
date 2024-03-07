@@ -13,7 +13,7 @@
 			<key>NAME</key>
 			<string>SignalDesktop</string>
 			<key>MUNKI_CATEGORY</key>
-			<string>Internet & Communication</string>
+			<string>Internet &amp; Communication</string>
 			<key>pkginfo</key>
 			<dict>
 				<key>catalogs</key>
