@@ -5,7 +5,7 @@
 	<key>Description</key>
 	<string>Download recipe for Enpass.</string>
 	<key>Identifier</key>
-	<string>com.github.gerardkok.download.enpass</string>
+	<string>com.github.gahel.download.enpass</string>
 	<key>Input</key>
 	<dict>
 		<key>NAME</key>
@@ -19,7 +19,7 @@
 			<key>Arguments</key>
 			<dict>
 				<key>re_pattern</key>
-				<string>(?P&lt;url&gt;https:\/\/dl\.enpass\.io\/stable\/mac\/package\/.*?Enpass\.pkg?)</string>
+				<string>(?P&lt;url&gt;https:\/\/www\.enpass\.io\/download\/macos\/website\/stable\/Enpass\.pkg?)</string>
 				<key>url</key>
 				<string>https://www.enpass.io/downloads/</string>
 			</dict>
