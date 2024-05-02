@@ -27,6 +27,17 @@
 			<string>URLTextSearcher</string>
 		</dict>
 		<dict>
+    			<key>Processor</key>
+    			<string>URLTextSearcher</string>
+    			<key>Arguments</key>
+    			<dict>
+        			<key>re_pattern</key>
+        			<string>class="badge_version">version ([\d.]+)</string>
+        			<key>url</key>
+        			<string>https://www.enpass.io/downloads/</string>
+    			</dict>
+		</dict>
+		<dict>
 			<key>Arguments</key>
 			<dict>
 		                <key>url</key>
