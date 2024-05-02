@@ -18,17 +18,6 @@
 		<dict>
 			<key>Arguments</key>
 			<dict>
-				<key>re_pattern</key>
-				<string>(?P&lt;url&gt;\/download\/macos\/website\/stable)</string>
-				<key>url</key>
-				<string>https://www.enpass.io/downloads/</string>
-			</dict>
-			<key>Processor</key>
-			<string>URLTextSearcher</string>
-		</dict>
-		<dict>
-			<key>Arguments</key>
-			<dict>
 		                <key>url</key>
                 		<string>https://www.enpass.io/download/macos/website/stable</string>
 				<key>filename</key>
