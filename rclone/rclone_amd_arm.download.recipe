@@ -23,7 +23,7 @@
 			<key>Arguments</key>
 			<dict>
 				<key>github_repo</key>
-				<string>ncw/rclone</string>
+				<string>rclone/rclone</string>
 				<key>asset_regex</key>
 				<string>rclone-v[0-9\.]*-osx-%ARCH%.zip</string>
 			</dict>
