@@ -35,6 +35,11 @@
 			<dict>
 				<key>url</key>
 				<string>%url%</string>
+        			<key>request_headers</key>
+        			<dict>
+            				<key>Accept</key>
+           				 <string>application/octet-stream</string>
+        			</dict>
 			</dict>
 		</dict>
 		<dict>
