@@ -35,9 +35,8 @@
             <dict>
                 <key>url</key>
                 <string>%url%</string>
-                <key>filename</key>
-                <!-- Use the %version% variable for a dynamic filename -->
-                <string>mreg-cli</string>
+                <key>prefetch_filename</key>
+                <true/>
             </dict>
         </dict>
         <dict>
