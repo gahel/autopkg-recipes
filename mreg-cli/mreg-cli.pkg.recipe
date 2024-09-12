@@ -48,20 +48,20 @@
 				<string>0755</string>
 				<key>file_content</key>
 				<string>#!/bin/bash
-/bin/chmod +x /usr/local/bin/example</string>
+/bin/chmod +x /usr/local/bin/mreg-cli</string>
 			</dict>
 		</dict>
 		<dict>
-    		<key>Processor</key>
-    		<string>FileMover</string>
-    		<key>Arguments</key>
-    		<dict>
-        		<key>source</key>
-        		<string>%RECIPE_CACHE_DIR%/downloads/mreg-cli-macos-latest-3.12</string>
-        		<key>target</key>
-        		<string>%RECIPE_CACHE_DIR%/usr/local/bin/mreg-cli</string>
-    		</dict>
-		</dict>	
+			<key>Processor</key>
+			<string>FileMover</string>
+			<key>Arguments</key>
+			<dict>
+				<key>source</key>
+				<string>%pathname%</string> <!-- Dynamically reference downloaded file -->
+				<key>target</key>
+				<string>%pkgroot%/usr/local/bin/mreg-cli</string>
+			</dict>
+		</dict>
 		<dict>
 			<key>Processor</key>
 			<string>PkgCreator</string>
