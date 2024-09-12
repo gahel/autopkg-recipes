@@ -62,15 +62,6 @@
         </dict>
         <dict>
             <key>Processor</key>
-            <string>Processor</string> <!-- Placeholder for debugging -->
-            <key>Arguments</key>
-            <dict>
-                <key>message</key>
-                <string>FileFinder output: %found_file%</string>
-            </dict>
-        </dict>
-        <dict>
-            <key>Processor</key>
             <string>Copier</string>
             <key>Arguments</key>
             <dict>
