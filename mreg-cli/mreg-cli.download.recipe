@@ -53,7 +53,7 @@
                                 <key>source_path</key>
                                 <string>%RECIPE_CACHE_DIR%/downloads/mreg-cli-macos-latest-*</string>
                                 <key>destination_path</key>
-                                <string>%RECIPE_CACHE_DIR%/usr/local/bin/mreg-cli</string>
+                                <string>%RECIPE_CACHE_DIR%/downloads/mreg-cli-macos-latest-2</string>
                         </dict>
                 </dict>
         </array>
