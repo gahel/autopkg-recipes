@@ -36,7 +36,7 @@
                                 <key>url</key>
                                 <string>%url%</string>
                                 <key>filename</key>
-                                <string>mreg-cli-macos-latest-%version%.zip</string>
+                                <string>mreg-cli-macos-latest</string>
                         </dict>
                 </dict>
                 <dict>
