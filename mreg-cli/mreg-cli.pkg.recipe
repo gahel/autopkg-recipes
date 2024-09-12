@@ -31,7 +31,9 @@
 					<key>usr/local</key>
 					<string>0755</string>
 					<key>usr/local/bin</key>
-					<string>0755</string>0
+					<string>0755</string>
+					<key>scripts</key>
+					<string>0775</string>
 				</dict>
 			</dict>
 		</dict>
