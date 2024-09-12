@@ -58,7 +58,7 @@
 					<key>pkgname</key>
 					<string>%NAME%-%version%</string>
 					<key>id</key>
-					<string>github.ncw.rclone</string>
+					<string>github.uio.no.mreg-cli</string>
 					<key>version</key>
 					<string>%version%</string>
 					<key>chown</key>
