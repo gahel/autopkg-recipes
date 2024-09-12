@@ -23,7 +23,9 @@
                                 <key>github_repo</key>
                                 <string>unioslo/mreg-cli</string>
                                 <key>asset_regex</key>
-        			<string>mreg-cli-macos-latest-3\.12</string>
+        			<string>mreg-cli-macos-latest-[0-9\.]*</string>
+        			<key>include_prereleases</key>
+       				 <true/>
                         </dict>
                 </dict>
                 <dict>
