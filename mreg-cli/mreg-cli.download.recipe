@@ -47,21 +47,6 @@
         </dict>
         <dict>
             <key>Processor</key>
-            <string>FileFinder</string>
-            <key>Arguments</key>
-            <dict>
-                <key>find_method</key>
-                <string>glob</string>
-                <key>pattern</key>
-                <string>%RECIPE_CACHE_DIR%/downloads/mreg-cli-macos-latest-[0-9\.]*</string>
-                <key>recurse</key>
-                <false/>
-            </dict>
-            <key>output_variable</key>
-            <string>found_file</string>
-        </dict>
-        <dict>
-            <key>Processor</key>
             <string>Copier</string>
             <key>Arguments</key>
             <dict>
