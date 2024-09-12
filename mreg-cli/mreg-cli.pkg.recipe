@@ -60,6 +60,7 @@
         #!/bin/bash
         /bin/chmod +x /usr/local/bin/example</string>
 			</dict>
+		</dict>
 		<dict>
 			<key>Processor</key>
 			<string>PkgCreator</string>
