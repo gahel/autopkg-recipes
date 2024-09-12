@@ -62,7 +62,7 @@
         </dict>
         <dict>
             <key>Processor</key>
-            <string>Logging</string>
+            <string>Processor</string> <!-- Example placeholder for debugging -->
             <key>Arguments</key>
             <dict>
                 <key>message</key>
