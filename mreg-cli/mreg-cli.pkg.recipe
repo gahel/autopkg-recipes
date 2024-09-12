@@ -58,7 +58,7 @@
     		<dict>
         		<key>source</key>
         		<string>%RECIPE_CACHE_DIR%/downloads/mreg-cli-macos-latest-3.12</string>
-        		<key>destination</key>
+        		<key>target</key>
         		<string>%RECIPE_CACHE_DIR%/usr/local/bin/mreg-cli</string>
     		</dict>
 		</dict>	
