@@ -44,8 +44,6 @@
 					<string>0755</string>
 					<key>usr/local/bin</key>
 					<string>0755</string>
-					<key>scripts</key>
-					<string>0775</string>
 				</dict>
 			</dict>
 		</dict>
