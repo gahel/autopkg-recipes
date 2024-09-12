@@ -51,7 +51,7 @@
                                 <key>source_path</key>
                                 <string>%RECIPE_CACHE_DIR%/downloads/%Filename%</string>
                                 <key>destination_path</key>
-                                <string>%RECIPE_CACHE_DIR%/mreg-cli</string>
+                                <string>%RECIPE_CACHE_DIR%/usr/local/mreg-cli</string>
                         </dict>
                 </dict>
         </array>
