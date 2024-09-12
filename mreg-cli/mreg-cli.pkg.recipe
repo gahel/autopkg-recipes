@@ -59,7 +59,7 @@
 				<key>source</key>
 				<string>%pathname%</string> <!-- Dynamically reference downloaded file -->
 				<key>target</key>
-				<string>%pkgroot%/usr/local/bin/mreg-cli</string>
+				<string>%RECIPE_CACHE_DIR%/usr/local/bin/mreg-cli</string>
 			</dict>
 		</dict>
 		<dict>
