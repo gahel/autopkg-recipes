@@ -48,7 +48,7 @@
 		</dict>
 		<dict>
 			<key>Processor</key>
-			<string>Filecreator</string>
+			<string>FileCreator</string>
 			<key>Arguments</key>
 			<dict>
 				<key>file_path</key>
