@@ -36,7 +36,7 @@
                                 <key>url</key>
                                 <string>%url%</string>
                                 <key>prefetch_filename</key>
-                                <true/>   
+                                <true/>
                         </dict>
                 </dict>
                 <dict>
@@ -49,7 +49,7 @@
                         <key>Arguments</key>
                         <dict>
                                 <key>source_path</key>
-                                <string>%RECIPE_CACHE_DIR%/downloads/mreg-cli-macos-latest-*</string>
+                                <string>%RECIPE_CACHE_DIR%/downloads/%Filename%</string>
                                 <key>destination_path</key>
                                 <string>%RECIPE_CACHE_DIR%/mreg-cli</string>
                         </dict>
