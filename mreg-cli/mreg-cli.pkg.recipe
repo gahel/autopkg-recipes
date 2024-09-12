@@ -43,7 +43,7 @@
 			<key>Arguments</key>
 			<dict>
 				<key>file_path</key>
-				<string>%pkgroot%/scripts/postinstall</string>
+				<string>%RECIPE_CACHE_DIR%/scripts/postinstall</string>
 				<key>file_mode</key>
 				<string>0755</string>
 				<key>file_content</key>
@@ -73,6 +73,8 @@
 					<string>%pkgroot%</string>
 					<key>pkgname</key>
 					<string>%NAME%-%version%</string>
+					<key>scripts</key>
+					<string>scripts</string>
 					<key>id</key>
 					<string>github.uio.no.mreg-cli</string>
 					<key>version</key>
