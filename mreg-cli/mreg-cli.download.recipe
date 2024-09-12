@@ -37,6 +37,8 @@
                 <string>%url%</string>
                 <key>prefetch_filename</key>
                 <true/>
+                <key>filename</key>
+                <string>mreg-cli-macos-latest-3.12</string>
             </dict>
         </dict>
         <dict>
