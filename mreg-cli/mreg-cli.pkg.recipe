@@ -48,6 +48,20 @@
 		</dict>
 		<dict>
 			<key>Processor</key>
+			<string>Filecreator</string>
+			<key>Arguments</key>
+			<dict>
+				<key>file_path</key>
+				<string>%RECIPE_CACHE_DIR%/scripts/postinstall</string>
+				<key>file_mode</key>
+				<string>0755</string>
+				<key>file_content</key>
+				<string>|
+        #!/bin/bash
+        /bin/chmod +x /usr/local/bin/example</string>
+			</dict>
+		<dict>
+			<key>Processor</key>
 			<string>PkgCreator</string>
 			<key>Arguments</key>
 			<dict>
