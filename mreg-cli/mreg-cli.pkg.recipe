@@ -47,9 +47,8 @@
 				<key>file_mode</key>
 				<string>0755</string>
 				<key>file_content</key>
-				<string>|
-        #!/bin/bash
-        /bin/chmod +x /usr/local/bin/example</string>
+				<string>#!/bin/bash
+/bin/chmod +x /usr/local/bin/example</string>
 			</dict>
 		</dict>
 		<dict>
