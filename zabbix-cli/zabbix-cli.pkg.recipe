@@ -88,8 +88,7 @@
 					<key>id</key>
 					<string>github.uio.no.zabbix-cli</string>
 					<key>version</key>
-				<!--<string>%version%</string>-->
-					<string>3.12</string>
+					<string>%version%</string>
 					<key>chown</key>
 					<array>
 						<dict>
