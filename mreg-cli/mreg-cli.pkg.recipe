@@ -60,7 +60,7 @@
 				<string>#!/bin/bash
 
 # Find the currently logged-in user
-currentUser=$(scutil &lt;&lt;&lt; "show State:/Users/ConsoleUser" | awk '/Name :/ && ! /loginwindow/ { print $3 }')
+currentUser=$(scutil &lt;&lt;&lt; "show State:/Users/ConsoleUser" | awk '/Name :/ &amp;&amp; ! /loginwindow/ { print $3 }')
 
 # Define the config file path for the logged-in user
 config_file="/Users/$currentUser/.config/mreg-cli.conf"
