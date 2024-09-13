@@ -58,7 +58,32 @@
 				<string>0755</string>
 				<key>file_content</key>
 				<string>#!/bin/bash
-/bin/chmod +x /usr/local/bin/mreg-cli</string>
+
+# Find the currently logged-in user
+currentUser=$(scutil <<< "show State:/Users/ConsoleUser" | awk '/Name :/ && ! /loginwindow/ { print $3 }')
+
+# Define the config file path for the logged-in user
+config_file="/Users/$currentUser/.config/mreg-cli.conf"
+
+# Check if the file already exists
+if [ ! -f "$config_file" ]; then
+  # Create the .config directory if it doesn't exist
+  mkdir -p "/Users/$currentUser/.config"
+
+  # Populate the config file
+  cat <<EOF > "$config_file"
+[mreg]
+USER=${currentUser}-drift
+URL=https://mreg.uio.no
+EOF
+
+  echo "Configuration file created at $config_file"
+else
+  echo "Configuration file already exists."
+fi
+
+exit 0
+</string>
 			</dict>
 		</dict>
 		<dict>
