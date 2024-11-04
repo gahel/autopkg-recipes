@@ -36,7 +36,7 @@
                 <key>url</key>
                 <string>%url%</string>
                 <key>prefetch_filename</key>
-                <true/>
+                <false/>
             </dict>
         </dict>
         <dict>
