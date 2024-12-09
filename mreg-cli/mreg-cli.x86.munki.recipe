@@ -5,7 +5,7 @@
 	<key>Description</key>
 	<string>Downloads, packages and imports the current release version of mreg-cli</string>
 	<key>Identifier</key>
-	<string>com.github.gahel.munki.mreg-cli</string>
+	<string>com.github.gahel.munki.x86.mreg-cli</string>
 	<key>Input</key>
 	<dict>
 		<key>NAME</key>
