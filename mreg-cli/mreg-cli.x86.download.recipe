@@ -5,7 +5,7 @@
     <key>Description</key>
     <string>Downloads the latest version of mreg-cli for macOS</string>
     <key>Identifier</key>
-    <string>com.github.gahel.download.mreg-cli</string>
+    <string>com.github.gahel.download.x86.mreg-cli</string>
     <key>Input</key>
     <dict>
         <key>NAME</key>
