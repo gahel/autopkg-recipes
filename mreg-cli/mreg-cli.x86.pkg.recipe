@@ -5,7 +5,7 @@
 	<key>Description</key>
 	<string>Create a package from the mreg-cli download</string>
 	<key>Identifier</key>
-	<string>com.github.gahel.pkg.mreg-cli</string>
+	<string>com.github.gahel.pkg.x86.mreg-cli</string>
 	<key>Input</key>
 	<dict>
 		<key>NAME</key>
@@ -14,7 +14,7 @@
 	<key>MinimumVersion</key>
 	<string>0.2.9</string>
 	<key>ParentRecipe</key>
-	<string>com.github.gahel.download.mreg-cli</string>
+	<string>com.github.gahel.download.x86.mreg-cli</string>
 	<key>Process</key>
 	<array>
 		<dict>
