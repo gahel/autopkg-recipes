@@ -107,7 +107,7 @@ exit 0
 					<key>pkgroot</key>
 					<string>%pkgroot%</string>
 					<key>pkgname</key>
-					<string>%NAME%-%version%</string>
+					<string>%NAME%-%version%-X86_64</string>
 					<key>scripts</key>
 					<string>scripts</string>
 					<key>id</key>
