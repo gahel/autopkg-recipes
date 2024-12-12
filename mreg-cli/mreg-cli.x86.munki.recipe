@@ -44,7 +44,7 @@
 					<key>display_name</key>
 					<string>%NAME%</string>
 					<key>name</key>
-					<string>%NAME%</string>
+					<string>%NAME% x86</string>
 					<key>category</key>
 					<string>Utilities</string>
 					<key>description</key>
