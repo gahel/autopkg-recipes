@@ -27,7 +27,7 @@
 	<key>MinimumVersion</key>
 	<string>0.2.9</string>
 	<key>ParentRecipe</key>
-	<string>com.github.gahel.pkg.mreg-cli</string>
+	<string>com.github.gahel.pkg.x86.mreg-cli</string>
 	<key>Process</key>
 	<array>
 		<dict>
@@ -36,7 +36,7 @@
 			<key>Arguments</key>
 			<dict>
 				<key>pkg_path</key>
-				<string>%RECIPE_CACHE_DIR%/%NAME%-%version%.pkg</string>
+				<string>%RECIPE_CACHE_DIR%/%NAME%-%version%-x86_64.pkg</string>
 				<key>repo_subdirectory</key>
 				<string>%MUNKI_REPO_SUBDIR%</string>
 				<key>pkginfo</key>
