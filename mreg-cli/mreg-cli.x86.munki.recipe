@@ -9,7 +9,7 @@
 	<key>Input</key>
 	<dict>
 		<key>NAME</key>
-		<string>mreg-cli_x86</string>
+		<string>mreg-cli</string>
 		<key>MUNKI_REPO_SUBDIR</key>
 		<string>utilities/mreg-cli</string>
 		<key>pkginfo</key>
@@ -42,7 +42,7 @@
 				<key>pkginfo</key>
 				<dict>
 					<key>display_name</key>
-					<string>%NAME%</string>
+					<string>%NAME% x86</string>
 					<key>name</key>
 					<string>%NAME%</string>
 					<key>category</key>
