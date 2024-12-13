@@ -5,11 +5,11 @@
 	<key>Description</key>
 	<string>Downloads, packages and imports the current release version of zabbix-cli</string>
 	<key>Identifier</key>
-	<string>com.github.gahel.munki.zabbix-cli</string>
+	<string>com.github.gahel.munki.zabbix-cli_arm</string>
 	<key>Input</key>
 	<dict>
 		<key>NAME</key>
-		<string>zabbix-cli_x86</string>
+		<string>zabbix-cli</string>
 		<key>MUNKI_REPO_SUBDIR</key>
 		<string>utilities/zabbix-cli</string>
 		<key>pkginfo</key>

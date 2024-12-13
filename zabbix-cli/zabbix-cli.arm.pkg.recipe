@@ -5,11 +5,11 @@
 	<key>Description</key>
 	<string>Create a package from the zabbix-cli download</string>
 	<key>Identifier</key>
-	<string>com.github.gahel.pkg.zabbix-cli</string>
+	<string>com.github.gahel.pkg.zabbix-cli_arm</string>
 	<key>Input</key>
 	<dict>
 		<key>NAME</key>
-		<string>zabbix-cli_x86</string>
+		<string>zabbix-cli</string>
 	</dict>
 	<key>MinimumVersion</key>
 	<string>0.2.9</string>
