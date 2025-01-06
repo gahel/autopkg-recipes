@@ -12,7 +12,7 @@ Version 7 (5.0): horizon_7_5_0
 Version 8: horizon_8
 	</string>
 	<key>Identifier</key>
-	<string>com.github.gahel.download.VMwareHorizonClient</string>
+	<string>com.github.gahel.download.OmnissaHorizonClient</string>
 	<key>Input</key>
 	<dict>
 		<key>HORIZON_MAJOR_VERSION</key>
@@ -89,7 +89,7 @@ Version 8: horizon_8
 					<string>Apple Root CA</string>
 				</array>
 				<key>input_path</key>
-				<string>%pathname%/VMware Horizon Client.pkg</string>
+				<string>%pathname%/Omnissa Horizon Client.pkg</string>
 			</dict>
 			<key>Processor</key>
 			<string>CodeSignatureVerifier</string>
