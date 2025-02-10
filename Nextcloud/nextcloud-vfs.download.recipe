@@ -29,8 +29,6 @@
 		<dict>
 			<key>Arguments</key>
 			<dict>
-				<key>filename</key>
-				<string>%url_filename%</string>
 			</dict>
 			<key>Processor</key>
 			<string>URLDownloader</string>
