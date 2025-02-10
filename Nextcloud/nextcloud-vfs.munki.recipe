@@ -9,7 +9,7 @@
       <key>Input</key>
       <dict>
          <key>NAME</key>
-         <string>Nextcloud</string>
+         <string>Nextcloud-vfs</string>
          <key>MUNKI_REPO_SUBDIR</key>
          <string>utilities/nextcloud</string>
          <key>pkginfo</key>
