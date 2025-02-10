@@ -19,7 +19,7 @@
 			<key>Arguments</key>
 			<dict>
 				<key>asset_regex</key>
-				<string>.*\macOS-vfs.pkg$</string>
+				<string>.*macOS-vfs\.pkg$</string>
 				<key>github_repo</key>
 				<string>nextcloud-releases/desktop</string>
 			</dict>
