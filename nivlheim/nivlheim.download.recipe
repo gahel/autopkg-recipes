@@ -3,9 +3,9 @@
 <plist version="1.0">
 <dict>
     <key>Description</key>
-    <string>Downloads the latest version of mreg-cli for macOS</string>
+    <string>Downloads the latest version of nivlheim_client</string>
     <key>Identifier</key>
-    <string>com.github.gahel.download.mreg-cli</string>
+    <string>com.github.gahel.download.nivlheim_client</string>
     <key>Input</key>
     <dict>
         <key>NAME</key>
