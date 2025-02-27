@@ -65,7 +65,7 @@
                 <key>overwrite</key>
                 <true/>
                 <key>source_path</key>
-                <string>%RECIPE_CACHE_DIR%/%NAME%/*/nivlheim_client</string>
+                <string>%RECIPE_CACHE_DIR%/%NAME%/*/client/nivlheim_client</string>
             </dict>
         </dict>
         <dict>
