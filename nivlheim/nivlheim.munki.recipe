@@ -3,15 +3,15 @@
 <plist version="1.0">
 <dict>
 	<key>Description</key>
-	<string>Downloads, packages and imports the current release version of mreg-cli</string>
+	<string>Downloads, packages and imports the current release version of nivlheim_client</string>
 	<key>Identifier</key>
 	<string>com.github.gahel.munki.nivlheim_client</string>
 	<key>Input</key>
 	<dict>
 		<key>NAME</key>
-		<string>mreg-cli</string>
+		<string>nivlheim_client</string>
 		<key>MUNKI_REPO_SUBDIR</key>
-		<string>utilities/mreg-cli</string>
+		<string>utilities/nivlheim_client</string>
 		<key>pkginfo</key>
 		<dict>
 			<key>catalogs</key>
@@ -27,7 +27,7 @@
 	<key>MinimumVersion</key>
 	<string>0.2.9</string>
 	<key>ParentRecipe</key>
-	<string>com.github.gahel.pkg.mreg-cli</string>
+	<string>com.github.gahel.pkg.nivlheim_client</string>
 	<key>Process</key>
 	<array>
 		<dict>
@@ -48,7 +48,7 @@
 					<key>category</key>
 					<string>Utilities</string>
 					<key>description</key>
-					<string>mreg-cli is a command line interface for the MREG API.</string>
+					<string>Nivlheim client for reporting.</string>
 					<key>developer</key>
 					<string>University of Oslo</string>
 				</dict>
