@@ -46,7 +46,7 @@
                 <dict>
                     <key>usr</key>
                     <string>0755</string>
-                    <key>usr/local</key>
+                    <key>usr/local/sbin</key>
                     <string>0755</string>
                     <key>usr/local/sbin</key>
                     <string>0755</string>
