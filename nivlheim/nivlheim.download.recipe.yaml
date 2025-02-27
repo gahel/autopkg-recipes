@@ -1,4 +1,3 @@
-
 Process:
   - Processor: URLTextSearcher
     Arguments:
@@ -50,7 +49,7 @@ Process:
       pkg_request:
         pkgname: "%NAME%"
         pkgdir: "%RECIPE_CACHE_DIR%"
-        id: "no.uio..usitnivlheim"
+        id: "no.uio.usitnivlheim"
         options: purge_ds_store
         scripts: scripts
         version: "1.0.0"
@@ -58,3 +57,4 @@ Process:
           - path: usr
             user: root
             group: admin
+
