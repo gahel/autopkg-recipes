@@ -43,14 +43,16 @@
             <key>Arguments</key>
             <dict>
                 <key>pkgdirs</key>
-				<dict>
-					<key>usr</key>
-					<string>0775</string>
-					<key>usr/local</key>
-					<string>0755</string>
-					<key>usr/local/sbin</key>
-					<string>0755</string>
-				</dict>
+                <dict>
+                    <key>usr</key>
+                    <string>0755</string>
+                    <key>usr/local</key>
+                    <string>0755</string>
+                    <key>usr/local/bin</key>
+                    <string>0755</string>
+                    <key>usr/local/sbin</key>
+                    <string>0755</string> <!-- Explicitly create /usr/local/sbin -->
+                </dict>
                 <key>pkgroot</key>
                 <string>%RECIPE_CACHE_DIR%/pkgroot</string>
             </dict>
