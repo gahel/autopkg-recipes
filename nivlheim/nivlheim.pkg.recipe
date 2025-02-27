@@ -50,8 +50,6 @@
                     <string>0755</string>
                     <key>usr/local/bin</key>
                     <string>0755</string>
-                    <key>usr/local/sbin</key>
-                    <string>0755</string> <!-- Explicitly create /usr/local/sbin -->
                 </dict>
                 <key>pkgroot</key>
                 <string>%RECIPE_CACHE_DIR%/pkgroot</string>
@@ -63,7 +61,7 @@
             <key>Arguments</key>
             <dict>
                 <key>destination_path</key>
-                <string>%RECIPE_CACHE_DIR%/pkgroot/usr/local/sbin/</string>
+                <string>%RECIPE_CACHE_DIR%/pkgroot/usr/local/bin/</string>
                 <key>overwrite</key>
                 <true/>
                 <key>source_path</key>
@@ -82,7 +80,7 @@
                 <key>file_content</key>
                 <string>
                     #!/bin/bash
-                    /bin/chmod +x /usr/local/sbin/nivlheim_client
+                    /bin/chmod +x /usr/local/bin/nivlheim_client
                 </string>
             </dict>
         </dict>
@@ -98,7 +96,7 @@
                     <key>pkgdir</key>
                     <string>%RECIPE_CACHE_DIR%</string>
                     <key>id</key>
-                    <string>no.uio.usitnivlheim</string>
+                    <string>no.uio.usit.nivlheim</string>
                     <key>options</key>
                     <string>purge_ds_store</string>
                     <key>scripts</key>
