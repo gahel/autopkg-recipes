@@ -48,7 +48,7 @@
                     <string>0755</string>
                     <key>usr/local</key>
                     <string>0755</string>
-                    <key>usr/local/bin</key>
+                    <key>usr/local/sbin</key>
                     <string>0755</string>
                 </dict>
                 <key>pkgroot</key>
