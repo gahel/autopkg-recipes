@@ -36,6 +36,19 @@
             </dict>
         </dict>
         <dict>
+        <key>Processor</key>
+        <string>URLTextSearcher</string>
+            <key>Arguments</key>
+                <dict>
+                <key>url</key>
+                <string>https://api.github.com/repos/unioslo/nivlheim/releases/latest</string>
+                <key>re_pattern</key>
+                <string>"tag_name":\s*"v?([0-9.]+)"</string>
+                <key>result_output_var_name</key>
+				<string>version</string>
+            </dict>
+        </dict>
+        <dict>
             <key>Processor</key>
             <string>URLDownloader</string>
             <key>Arguments</key>
