@@ -51,6 +51,8 @@
                     <key>usr/local/bin</key>
                     <string>0755</string>
                 </dict>
+                <key>version</key>
+				<string>%version%</string>
                 <key>pkgroot</key>
                 <string>%RECIPE_CACHE_DIR%/pkgroot</string>
             </dict>
