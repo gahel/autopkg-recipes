@@ -51,8 +51,6 @@
                     <key>usr/local/bin</key>
                     <string>0755</string>
                 </dict>
-                <key>version</key>
-				<string>%version%</string>
                 <key>pkgroot</key>
                 <string>%RECIPE_CACHE_DIR%/pkgroot</string>
             </dict>
@@ -99,6 +97,8 @@
                     <string>%RECIPE_CACHE_DIR%</string>
                     <key>id</key>
                     <string>no.uio.usit.nivlheim</string>
+                    <key>version</key>
+				    <string>%version%</string>
                     <key>options</key>
                     <string>purge_ds_store</string>
                     <key>scripts</key>
