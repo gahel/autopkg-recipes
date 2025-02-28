@@ -103,8 +103,6 @@
                     <string>purge_ds_store</string>
                     <key>scripts</key>
                     <string>scripts</string>
-                    <key>version</key>
-                    <string>%version%</string>
                     <key>chown</key>
                     <array>
                         <dict>
