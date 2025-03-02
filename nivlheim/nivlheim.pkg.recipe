@@ -105,7 +105,7 @@ PLIST_FILE="/Library/LaunchDaemons/no.uio.usit.nivlheim.plist"
 sudo mkdir -p /etc/nivlheim
 
 # Create client.yaml
-sudo tee "$CONFIG_FILE" &gt; /dev/null <<EOL
+sudo tee "$CONFIG_FILE" &gt; /dev/null &lt;&lt;EOL
 files:
   - /etc/exports
   - /etc/fstab
