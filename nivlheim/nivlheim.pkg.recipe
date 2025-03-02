@@ -94,8 +94,7 @@
                 <key>file_mode</key>
                 <string>0755</string>
                 <key>file_content</key>
-                <string>
-                    #!/bin/bash
+                <string>#!/bin/bash
 /bin/chmod +x /usr/local/bin/nivlheim_client
 # Define file paths
 CONFIG_FILE="/etc/nivlheim/client.yaml"
@@ -212,7 +211,8 @@ sudo chown root:wheel /private/etc/ssl/certs/ca-bundle.crt
 sudo chown -R root:wheel /private/etc/nivlheim
 
 # Load the plist file
-sudo launchctl bootstrap system /Library/LaunchDaemons/no.uio.usit.nivlheim.plist
+#sudo launchctl bootstrap system /Library/LaunchDaemons/no.uio.usit.nivlheim.plist
+sudo launchctl load "$PLIST_FILE" &gt; /dev/null 2&gt;&1
                 </string>
             </dict>
         </dict>
