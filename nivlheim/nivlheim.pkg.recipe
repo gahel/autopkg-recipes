@@ -184,20 +184,20 @@ EOL
 
 # Create plist file
 sudo tee "$PLIST_FILE" &gt; /dev/null &lt;&lt;EOL
-<?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
-<plist version="1.0">
-<dict>
-    <key>Label</key>
-    <string>no.uio.usit.nivlheim</string>
-    <key>ProgramArguments</key>
-    <array>
-        <string>/usr/local/bin/nivlheim_client</string>
-    </array>
-    <key>StartInterval</key>
-    <integer>3600</integer>
-</dict>
-</plist>
+&lt;?xml version="1.0" encoding="UTF-8"?&gt;
+&lt;!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd"&gt;
+&lt;plist version="1.0"&gt;
+&lt;dict&gt;
+    &lt;key&gt;Label&lt;/key&gt;
+    &lt;string&gt;no.uio.usit.nivlheim&lt;/string&gt;
+    &lt;key&gt;ProgramArguments&lt;/key&gt;
+    &lt;array&gt;
+        &lt;string&gt;/usr/local/bin/nivlheim_client&lt;/string&gt;
+    &lt;/array&gt;
+    &lt;key&gt;StartInterval&lt;/key&gt;
+    &lt;integer&gt;3600&lt;/integer&gt;
+&lt;/dict&gt;
+&lt;/plist&gt;
 EOL
 
 # Set permissions
