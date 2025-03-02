@@ -212,7 +212,7 @@ sudo chown -R root:wheel /private/etc/nivlheim
 
 # Load the plist file
 #sudo launchctl bootstrap system /Library/LaunchDaemons/no.uio.usit.nivlheim.plist
-sudo launchctl load "$PLIST_FILE" > /dev/null 2>&1
+sudo launchctl load "$PLIST_FILE" &gt; /dev/null
                 </string>
             </dict>
         </dict>
