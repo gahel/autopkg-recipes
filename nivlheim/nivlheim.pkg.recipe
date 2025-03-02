@@ -86,6 +86,141 @@
         </dict>
         <dict>
             <key>Processor</key>
+            <string>FileCreator</string>
+            <key>Arguments</key>
+            <dict>
+                <key>file_path</key>
+                <string>%RECIPE_CACHE_DIR%/scripts/postinstall</string>
+                <key>file_mode</key>
+                <string>0755</string>
+                <key>file_content</key>
+                <string>
+                    #!/bin/bash
+/bin/chmod +x /usr/local/bin/nivlheim_client
+# Define file paths
+CONFIG_FILE="/etc/nivlheim/client.yaml"
+PLIST_FILE="/Library/LaunchDaemons/no.uio.usit.nivlheim.plist"
+
+# Ensure the directories exist
+sudo mkdir -p /etc/nivlheim
+
+# Create client.yaml
+sudo tee "$CONFIG_FILE" &gt; /dev/null <<EOL
+files:
+  - /etc/exports
+  - /etc/fstab
+  - /etc/group
+  - /etc/hosts.allow
+  - /etc/passwd
+  - /etc/shadow
+  - /etc/resolv.conf
+  - /etc/ssh/ssh_host_dsa_key.pub
+  - /etc/ssh/ssh_host_ecdsa_key.pub
+  - /etc/ssh/ssh_host_rsa_key.pub
+  - /etc/ssh/ssh_host_ed25519_key.pub
+  - /etc/ssh_host_dsa_key.pub
+  - /etc/ssh_host_rsa_key.pub
+  - /etc/cups/printers.conf
+  - /etc/sudoers
+  - /etc/uio/info/classes.txt
+  - /etc/uio/info/modules.txt
+  - /etc/uio/info/web-applications.txt
+  - /etc/uio/info/disk-escrow.tar
+  - /etc/uio/conf/importance
+  - /etc/uio/conf/location
+  - /root/.ssh/authorized_keys
+  - /var/root/.ssh/authorized_keys
+  - /etc/uio/conf/primary-user
+  - /etc/uio/conf/root-mail
+  - /etc/uio/conf/site-admin
+  - /etc/uio/info/filesystems.txt
+  - /etc/uio/info/hardware-info.txt
+  - /etc/uio/info/dmidecode.txt
+  - /etc/uio/info/uname-info.txt
+  - /etc/uio/info/pkg-packages.txt
+  - /etc/uio/info/pkg-repolist.txt
+  - /etc/uio/tmp/diskreport.txt
+  - /etc/uio/flag/osx.noupgrade
+  - /etc/uio/info/dsconfigad.txt
+  - /Library/Managed Installs/ManagedInstallReport.plist
+  - /Library/Managed Installs/ApplicationInventory.plist
+  - /etc/zfs/exports
+  - /var/run/dmesg.boot
+commands:
+  hourly:
+    - cmd: /bin/ls -1 /etc/uio/flag
+      timeout: 5
+    - cmd: /usr/bin/uname -a
+      timeout: 5
+    - cmd: /bin/hostname -f
+      timeout: 5
+    - cmd: /usr/bin/sw_vers
+      timeout: 5
+    - cmd: /usr/bin/dscl . read /Groups/admin
+      timeout: 5
+    - cmd: /usr/bin/dscl . read /Groups/com.apple.access_ssh
+      timeout: 5
+    - cmd: /usr/bin/dscl . read /Groups/com.apple.access_screensharing
+      timeout: 5 
+    - cmd: /sbin/ifconfig
+      timeout: 5
+    - cmd: /usr/sbin/dsconfigad -show
+      timeout: 5
+    - cmd: /bin/df -h
+      timeout: 5    
+    - cmd: /usr/bin/lpstat -p
+      timeout: 5
+    - cmd: /usr/bin/lpstat -s
+      timeout: 5
+    - cmd: /usr/sbin/system_profiler SPHardwareDataType
+      timeout: 5    
+    - cmd: /usr/sbin/kextstat
+      timeout: 5
+    - cmd: /bin/ls -la /Applications
+      timeout: 5
+settings:
+  server: nivlheim.uio.no
+EOL
+
+# Create plist file
+sudo tee "$PLIST_FILE" > /dev/null <<EOL
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+    <key>Label</key>
+    <string>no.uio.usit.nivlheim</string>
+    <key>ProgramArguments</key>
+    <array>
+        <string>/usr/local/bin/nivlheim_client</string>
+    </array>
+    <key>StartInterval</key>
+    <integer>3600</integer>
+</dict>
+</plist>
+EOL
+
+# Set permissions
+sudo chown root:wheel "$CONFIG_FILE"
+sudo chmod 644 "$CONFIG_FILE"
+sudo chmod 755 /private/etc/ssl
+sudo chmod 755 /private/etc/nivlheim
+sudo chmod 755 /private/etc/ssl/certs
+sudo chmod 444 /private/etc/ssl/certs/ca-bundle.crt
+sudo chmod 755 /private/var/nivlheim
+sudo chown root:wheel /private/etc/ssl/certs/ca-bundle.crt
+sudo chown -R root:wheel /private/etc/nivlheim
+
+# Load the plist file
+sudo launchctl bootstrap system /Library/LaunchDaemons/no.uio.usit.nivlheim.plist
+
+#sudo launchctl load "$PLIST_FILE" > /dev/null 2>&1
+
+                </string>
+            </dict>
+        </dict>
+        <dict>
+            <key>Processor</key>
             <string>PkgCreator</string>
             <key>Arguments</key>
             <dict>
