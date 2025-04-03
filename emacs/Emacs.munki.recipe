@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Description</key>
+	<string>Creates a Munki package for the latest version of Emacs for macOS.</string>
+	<key>Identifier</key>
+	<string>com.github.gahel.munki.Emacs</string>
+	<key>Input</key>
+	<dict>
+		<key>NAME</key>
+		<string>Emacs for macOS</string>
+		<key>VENDOR</key>
+		<string>Emacs</string>
+        <key>MUNKI_REPO_SUBDIR</key>
+        <string>apps</string>
+        <key>MUNKI_CATEGORY</key>
+        <string>Development</string>
+        <key>pkginfo</key>
+        <dict>
+            <key>catalogs</key>
+            <array>
+                <string>testing</string>
+            </array>
+            <key>blocking_applications</key>
+            <array>
+                <string>Emacs.app</string>
+            </array>
+            <key>category</key>
+            <string>%MUNKI_CATEGORY%</string>
+            <key>description</key>
+            <string>Pure Emacs! No Extras! No Nonsense! GNU Emacs built for Mac OS X as a native Mac app.</string>
+            <key>developer</key>
+            <string>Emacs</string>
+            <key>display_name</key>
+            <string>GNU Emacs for Mac OS X</string>
+            <key>name</key>
+            <string>%NAME%</string>
+            <key>unattended_install</key>
+            <true/>
+        </dict>
+	</dict>
+	<key>MinimumVersion</key>
+	<string>1.0.0</string>
+	<key>ParentRecipe</key>
+	<string>com.github.gahel.pkg.Emacs</string>
+	<key>Process</key>
+	<array>
+		<dict>
+			<key>Processor</key>
+			<string>MunkiImporter</string>
+			<key>Arguments</key>
+			<dict>
+				<key>pkg_path</key>
+				<string>%pathname%</string>
+				<key>pkginfo</key>
+				<dict>
+					<key>name</key>
+					<string>Emacs</string>
+					<key>display_name</key>
+					<string>Emacs</string>
+					<key>description</key>
+					<string>Emacs text editor for macOS</string>
+					<key>version</key>
+					<string>%version%</string>
+					<key>category</key>
+					<string>Development</string>
+					<key>developer</key>
+					<string>Emacs</string>
+					<key>minimum_os_version</key>
+					<string>10.12.0</string>
+					<key>unattended_install</key>
+					<true/>
+				</dict>
+			</dict>
+		</dict>
+	</array>
+</dict>
+</plist>
+
