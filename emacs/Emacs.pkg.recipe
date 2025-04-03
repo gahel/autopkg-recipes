@@ -9,7 +9,7 @@
 	<key>Input</key>
 	<dict>
 		<key>NAME</key>
-		<string>Emacs for macOS</string>
+		<string>Emacs</string>
 		<key>VENDOR</key>
 		<string>Emacs</string>
 	</dict>
