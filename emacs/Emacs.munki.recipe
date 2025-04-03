@@ -46,6 +46,35 @@
 	<string>com.github.gahel.pkg.Emacs</string>
 	<key>Process</key>
 	<array>
+        <dict>
+            <key>Arguments</key>
+            <dict>
+                <key>additional_pkginfo</key>
+                <dict>
+                    <key>installs</key>
+                    <array>
+                        <dict>
+                            <key>CFBundleIdentifier</key>
+                            <string>org.gnu.Emacs</string>
+                            <key>CFBundleName</key>
+                            <string>Emacs</string>
+                            <key>CFBundleShortVersionString</key>
+                            <string>%version%</string>
+                            <key>path</key>
+                            <string>/Applications/Emacs.app</string>
+                            <key>type</key>
+                            <string>application</string>
+                            <key>version_comparison_key</key>
+                            <string>CFBundleShortVersionString</string>
+                        </dict>
+                    </array>
+                    <key>version</key>
+                    <string>%version%</string>
+                </dict>
+            </dict>
+            <key>Processor</key>
+            <string>MunkiPkginfoMerger</string>
+        </dict>
 		<dict>
 			<key>Processor</key>
 			<string>MunkiImporter</string>
