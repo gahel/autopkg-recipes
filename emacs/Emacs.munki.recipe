@@ -52,7 +52,7 @@
 			<key>Arguments</key>
 			<dict>
 				<key>pkg_path</key>
-				<string>%pathname%</string>
+				<string>%RECIPE_CACHE_DIR%/Emacs-%version%.pkg</string>
 				<key>pkginfo</key>
 				<dict>
 					<key>name</key>
