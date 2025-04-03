@@ -9,7 +9,7 @@
 	<key>Input</key>
 	<dict>
 		<key>NAME</key>
-		<string>Emacs</string>
+		<string>EmacsForMacOSX</string>
 		<key>VENDOR</key>
 		<string>Emacs</string>
         <key>MUNKI_REPO_SUBDIR</key>
