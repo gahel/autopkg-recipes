@@ -88,12 +88,12 @@ exit 0
 		</dict>
 		<dict>
 			<key>Processor</key>
-			<string>FileMover</string>
+			<string>Copier</string>
 			<key>Arguments</key>
 			<dict>
-				<key>source</key>
+				<key>source_path</key>
 				<string>%pathname%</string> <!-- Dynamically reference downloaded file -->
-				<key>target</key>
+				<key>destination_path</key>
 				<string>%pkgroot%/usr/local/bin/mreg-cli</string>
 			</dict>
 		</dict>
