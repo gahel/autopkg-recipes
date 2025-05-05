@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<plist version="1.0">
+<dict>
+    <key>Identifier</key>
+    <string>com.github.gahelmunki.jq</string>
+
+    <key>Input</key>
+    <dict>
+        <key>pkg_path</key>
+        <string>%RECIPE_CACHE_DIR%/rtrouton-recipes/JQ/JQUniversal.pkg</string>
+        <key>version</key>
+        <string>%version%</string>
+        <key>NAME</key>
+        <string>jq</string>
+    </dict>
+
+    <key>ParentRecipe</key>
+    <string>com.github.rtrouton-recipes.pkg.JQUniversal</string>
+
+    <key>Process</key>
+    <array>
+        <dict>
+            <key>Processor</key>
+            <string>MunkiImporter</string>
+            <key>Arguments</key>
+            <dict>
+                <key>pkg_path</key>
+                <string>%pkg_path%</string>
+                <key>munki_repo_subdirectory</key>
+                <string>apps/jq</string>
+                <key>name</key>
+                <string>%NAME%</string>
+                <key>version</key>
+                <string>%version%</string>
+            </dict>
+        </dict>
+    </array>
+</dict>
+</plist>
