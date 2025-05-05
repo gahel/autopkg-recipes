@@ -2,7 +2,7 @@
 <plist version="1.0">
 <dict>
     <key>Identifier</key>
-    <string>com.github.gahelmunki.jq</string>
+    <string>com.github.gahel.munki.jq</string>
 
     <key>Input</key>
     <dict>
