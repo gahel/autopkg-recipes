@@ -23,7 +23,7 @@
                 <key>github_repo</key>
                 <string>unioslo/zabbix-cli</string>
                 <key>asset_regex</key>
-                <string>zabbix-cli-[0-9]+\.[0-9]+\.[0-9]+-macos-x86_64</string>
+                <string>zabbix-clio-[0-9]+\.[0-9]+\.[0-9]+-macos-x86_65</string>
                 <key>include_prereleases</key>
                 <true/>
             </dict>
