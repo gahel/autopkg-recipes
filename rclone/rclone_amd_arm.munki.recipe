@@ -18,6 +18,8 @@
 			<array>
 				<string>testing</string>
 			</array>
+			<key>unattended_install</key>
+                        <true/>
 			<!--<key>display_name</key>
 			<string>%NAME%</string>
 			<key>name</key>
