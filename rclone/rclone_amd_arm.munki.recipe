@@ -53,6 +53,8 @@
 					<string>Rclone is a command line program to sync files to and from Google Drive, Amazon Cloud Drive, S3, Dropbox, Backblaze B2, One Drive, Swift, Hubic, Cloudfiles, Google Cloud Storage and Yandex. It&apos;s features include MD5/SHA1 hashes, preserved timestamps, partial and one-way syncs and cross platform syncing.</string>
 					<key>developer</key>
 					<string>Nick Craig-Wood</string>
+					<key>unattended_install</key>
+    					<true/>
 				</dict>
 			</dict>
 		</dict>
