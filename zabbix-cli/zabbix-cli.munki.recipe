@@ -43,16 +43,18 @@
 				<string>%MUNKI_REPO_SUBDIR%</string>
 				<key>pkginfo</key>
 				<dict>
-					<key>display_name</key>
-					<string>%NAME%</string>
-					<key>name</key>
-					<string>%NAME%</string>
-					<key>category</key>
-					<string>Utilities</string>
-					<key>description</key>
-					<string>zabbix-cli is a command line interface for the zabbix API.</string>
-					<key>developer</key>
-					<string>University of Oslo</string>
+    					<key>display_name</key>
+    					<string>%NAME%</string>
+    					<key>name</key>
+    					<string>%NAME%</string>
+    					<key>category</key>
+    					<string>Utilities</string>
+    					<key>description</key>
+    					<string>zabbix-cli is a command line interface for the zabbix API.</string>
+    					<key>developer</key>
+    					<string>University of Oslo</string>
+    					<key>unattended_install</key>
+    					<true/>
 				</dict>
 			</dict>
 		</dict>
