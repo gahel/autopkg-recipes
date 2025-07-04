@@ -18,10 +18,6 @@
 			<array>
 				<string>testing</string>
 			</array>
-			<!--<key>display_name</key>
-			<string>%NAME%</string>
-			<key>name</key>
-			<string>%NAME%</string>-->
 			<key>unattended_install</key>
 			<true/>
 		</dict>
