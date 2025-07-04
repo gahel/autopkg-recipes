@@ -49,6 +49,8 @@
 					<string>Nivlheim client for reporting.</string>
 					<key>developer</key>
 					<string>University of Oslo</string>
+					<key>unattended_install</key>
+					<true/>
 				</dict>
 			</dict>
 		</dict>
