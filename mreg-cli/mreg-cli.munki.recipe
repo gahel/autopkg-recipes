@@ -53,6 +53,8 @@
 					<string>mreg-cli is a command line interface for the MREG API.</string>
 					<key>developer</key>
 					<string>University of Oslo</string>
+                    <key>unattended_install</key>
+                    <true/>
 				</dict>
 			</dict>
 		</dict>
