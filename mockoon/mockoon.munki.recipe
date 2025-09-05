@@ -35,7 +35,7 @@
 	<key>MinimumVersion</key>
 	<string>2.3</string>
 	<key>ParentRecipe</key>
-	<string>com.github.gahel.download.Mockoon</string>
+	<string>com.github.gahel.download.mockoon</string>
 	<key>Process</key>
 	<array>
 		<dict>
