@@ -40,14 +40,12 @@
 			<string>EndOfCheckPhase</string>
 		</dict>
 		<dict>
-			<key>Processor</key>
-			<string>Unarchiver</string>
-			<key>Arguments</key>
-			<dict>
-				<key>destination_path</key>
-				<string>%RECIPE_CACHE_DIR%/downloads/</string>
-			</dict>
+			<key>Processor</key><string>AppDmgVersioner</string>
+			key>Arguments</key>
+		<dict>
+			<key>dmg_path</key><string>%pathname%</string>
 		</dict>
+    </dict>
 	</array>
 </dict>
 </plist>
