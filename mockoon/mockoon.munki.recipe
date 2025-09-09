@@ -21,7 +21,7 @@
 				<string>testing</string>
 			</array>
 			<key>description</key>
-			<string> </string>
+			<string>Mockoon is the easiest and quickest way to design and run mock REST APIs.</string>
 			<key>developer</key>
 			<string>1kB SARL-S</string>
 			<key>display_name</key>
