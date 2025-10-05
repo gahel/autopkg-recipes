@@ -1,2 +1,2 @@
 # ghelfjord-recipes
-Autopkg recipes
+Autopkg recipes .
