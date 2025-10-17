@@ -5,7 +5,7 @@
     <key>Description</key>
     <string>Imports DBeaver Community Edition into Munki.</string>
     <key>Identifier</key>
-    <string>com.github.gahel.munki.DBeaverCe</string>
+    <string>com.github.gahel.munki.DBeaverCE</string>
     <key>Input</key>
     <dict>
         <key>APP_FILENAME</key>
