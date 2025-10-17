@@ -24,6 +24,8 @@
             </array>
             <key>description</key>
             <string>Free multi-platform database tool for developers, SQL programmers, database administrators and analysts. Supports all popular databases: MySQL, PostgreSQL, MariaDB, SQLite, Oracle, DB2, SQL Server, Sybase, MS Access, Teradata, Firebird, Derby, etc.</string>
+            <key>category></key>
+            <string>Utilities</string>
             <key>developer</key>
             <string>DBeaver Corp</string>
             <key>display_name</key>
