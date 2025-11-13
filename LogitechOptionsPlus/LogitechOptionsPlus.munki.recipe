@@ -78,18 +78,26 @@
         </dict>
         <dict>
             <key>Processor</key>
-            <string>ShellScriptProcessor</string>
+            <string>Copier</string>
             <key>Arguments</key>
             <dict>
-                <key>script_path</key>
-                <string>/usr/bin/productbuild</string>
-                <key>script_contents</key>
-                <string>#!/bin/bash
-APP_PATH="%found_filename%"
-PKG_PATH="%RECIPE_CACHE_DIR%/%NAME%.pkg"
-/usr/bin/productbuild --component "$APP_PATH" /Applications --sign - "$PKG_PATH"
-echo "$PKG_PATH"
-</string>
+                <key>source_path</key>
+                <string>%found_filename%</string>
+                <key>destination_path</key>
+                <string>%RECIPE_CACHE_DIR%/%NAME%.app</string>
+            </dict>
+        </dict>
+        <dict>
+            <key>Processor</key>
+            <string>MunkiInstallsItemsCreator</string>
+            <key>Arguments</key>
+            <dict>
+                <key>faux_root</key>
+                <string>%RECIPE_CACHE_DIR%</string>
+                <key>installs_item_paths</key>
+                <array>
+                    <string>/Applications/%NAME%.app</string>
+                </array>
             </dict>
         </dict>
         <dict>
@@ -101,6 +109,8 @@ echo "$PKG_PATH"
                 <dict>
                     <key>version</key>
                     <string>%version%</string>
+                    <key>installer_item_location</key>
+                    <string>%NAME%.app</string>
                 </dict>
             </dict>
         </dict>
@@ -110,7 +120,7 @@ echo "$PKG_PATH"
             <key>Arguments</key>
             <dict>
                 <key>pkg_path</key>
-                <string>%RECIPE_CACHE_DIR%/%NAME%.pkg</string>
+                <string>%RECIPE_CACHE_DIR%/%NAME%.app</string>
                 <key>repo_subdirectory</key>
                 <string>%MUNKI_REPO_SUBDIR%</string>
             </dict>
