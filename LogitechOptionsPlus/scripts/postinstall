@@ -1,0 +1,12 @@
+#!/bin/bash
+
+# PostInstall script for Logi OptionsPlus
+# Launches the installer app as the currently logged-in user
+
+# Get the currently logged-in user
+LOGGED_IN_USER=$(/usr/bin/stat -f%Su /dev/console)
+
+# Launch the installer app
+/bin/launchctl asuser $(id -u "$LOGGED_IN_USER") /usr/bin/open "/Applications/logioptionsplus_installer.app"
+
+exit 0
