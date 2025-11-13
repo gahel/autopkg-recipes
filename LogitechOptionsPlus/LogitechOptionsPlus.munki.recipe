@@ -71,7 +71,7 @@
                 <string>%found_filename%/Contents/Info.plist</string>
                 <key>plist_keys</key>
                 <dict>
-                    <key>CFBundleShortVersionString</key>
+                    <key>CFBundleVersion</key>
                     <string>version</string>
                     <key>LSMinimumSystemVersion</key>
                     <string>min_os_vers</string>
