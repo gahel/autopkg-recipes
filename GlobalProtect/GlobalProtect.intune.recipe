@@ -49,14 +49,14 @@
             </dict>
         </dict>
 
-        <!-- FINN gp.pkg (ligger rett i unpack/, ikke i Distribution/) -->
+        <!-- FINN kun gp.pkg (ikke gp_uninstall/gp_systemext) -->
         <dict>
             <key>Processor</key>
             <string>FileFinder</string>
             <key>Arguments</key>
             <dict>
                 <key>pattern</key>
-                <string>%RECIPE_CACHE_DIR%/unpack/gp*.pkg</string>
+                <string>%RECIPE_CACHE_DIR%/unpack/gp.pkg</string>
             </dict>
         </dict>
 
