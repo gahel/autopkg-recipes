@@ -4,8 +4,10 @@
 <dict>
     <key>Description</key>
     <string>Uses peshay's download recipe to fetch GlobalProtect and packages it for Intune upload.</string>
+
     <key>Identifier</key>
     <string>com.github.gahel.intune.GlobalProtect</string>
+
     <key>Input</key>
     <dict>
         <key>NAME</key>
@@ -25,12 +27,16 @@
         <key>display_name</key>
         <string>GlobalProtect</string>
     </dict>
+
     <key>MinimumVersion</key>
     <string>0.6.1</string>
+
     <key>ParentRecipe</key>
     <string>com.github.peshay.download.GlobalProtect</string>
+
     <key>Process</key>
     <array>
+        <!-- Pakker ut flat pkg til %RECIPE_CACHE_DIR%/unpack -->
         <dict>
             <key>Processor</key>
             <string>FlatPkgUnpacker</string>
@@ -42,15 +48,19 @@
                 <string>%RECIPE_CACHE_DIR%/unpack</string>
             </dict>
         </dict>
+
+        <!-- FINN gp.pkg (ligger rett i unpack/, ikke i Distribution/) -->
         <dict>
             <key>Processor</key>
             <string>FileFinder</string>
             <key>Arguments</key>
             <dict>
                 <key>pattern</key>
-                <string>%RECIPE_CACHE_DIR%/unpack/Distribution/gp.pkg</string>
+                <string>%RECIPE_CACHE_DIR%/unpack/gp*.pkg</string>
             </dict>
         </dict>
+
+        <!-- Pakk ut payload fra gp.pkg -->
         <dict>
             <key>Processor</key>
             <string>PkgPayloadUnpacker</string>
@@ -64,6 +74,8 @@
                 <true/>
             </dict>
         </dict>
+
+        <!-- Finn appen i payload/Applications -->
         <dict>
             <key>Processor</key>
             <string>FileFinder</string>
@@ -73,6 +85,8 @@
                 <string>%RECIPE_CACHE_DIR%/payload/Applications/*.app</string>
             </dict>
         </dict>
+
+        <!-- Les Info.plist fra app-bundlen for versjon og bundle id -->
         <dict>
             <key>Processor</key>
             <string>PlistReader</string>
@@ -89,6 +103,8 @@
                 </dict>
             </dict>
         </dict>
+
+        <!-- Hent ikon fra appen til Intune -->
         <dict>
             <key>Processor</key>
             <string>com.github.almenscorner.intune-upload.processors/IntuneAppIconGetter</string>
@@ -100,6 +116,8 @@
                 <string>%NAME%</string>
             </dict>
         </dict>
+
+        <!-- Last opp til Intune -->
         <dict>
             <key>Processor</key>
             <string>com.github.almenscorner.intune-upload.processors/IntuneAppUploader</string>
