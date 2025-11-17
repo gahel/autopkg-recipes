@@ -93,16 +93,14 @@
             </dict>
         </dict>
 
-        <!-- 5: Hent ikon fra app-bundlen i payload/ -->
+        <!-- 5: Finn .icns-ikon i payloaden -->
         <dict>
             <key>Processor</key>
-            <string>com.github.almenscorner.intune-upload.processors/IntuneAppIconGetter</string>
+            <string>FileFinder</string>
             <key>Arguments</key>
             <dict>
-                <key>app_file</key>
-                <string>%RECIPE_CACHE_DIR%/payload</string>
-                <key>name</key>
-                <string>%NAME%</string>
+                <key>pattern</key>
+                <string>%RECIPE_CACHE_DIR%/payload/Contents/Resources/*.icns</string>
             </dict>
         </dict>
 
@@ -127,8 +125,9 @@
                 <key>displayname</key>
                 <string>%display_name%</string>
 
+                <!-- Ikon fra .icns-fil funnet over -->
                 <key>icon</key>
-                <string>%icon_file_path%</string>
+                <string>%found_filename%</string>
 
                 <key>publisher</key>
                 <string>%developer%</string>
