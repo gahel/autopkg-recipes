@@ -48,7 +48,7 @@
             <key>Arguments</key>
             <dict>
                 <key>pattern</key>
-                <string>%RECIPE_CACHE_DIR%/unpack/GlobalProtect.pkg</string>
+                <string>%RECIPE_CACHE_DIR%/unpack/Distribution/gp.pkg</string>
             </dict>
         </dict>
         <dict>
