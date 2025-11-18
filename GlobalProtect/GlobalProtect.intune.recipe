@@ -112,7 +112,7 @@
         <!-- 6: Ekstraher ikon til PNG med IntuneAppIconGetter -->
         <dict>
             <key>Processor</key>
-            <string>IntuneAppIconGetter</string>
+            <string>com.github.almenscorner.intune-upload.processors/IntuneAppIconGetter</string>
             <!-- hvis den ikke finnes slik, bruk:
                  com.github.almenscorner.intune-upload.processors/IntuneAppIconGetter -->
             <key>Arguments</key>
