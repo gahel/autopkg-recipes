@@ -16,6 +16,7 @@
         <string>vpn.example.com</string>
         <key>PLATFORM</key>
         <string>mac</string>
+
         <key>categories</key>
         <array>
             <string>Security</string>
@@ -93,14 +94,19 @@
             </dict>
         </dict>
 
-        <!-- 5: Finn .icns-ikon i payloaden -->
+        <!-- 5: Ekstraher ikon til PNG med IntuneAppIconGetter -->
         <dict>
             <key>Processor</key>
-            <string>FileFinder</string>
+            <!-- hvis denne ikke funker, prøv bare "IntuneAppIconGetter" -->
+            <string>com.github.almenscorner.intune-upload.processors/IntuneAppIconGetter</string>
             <key>Arguments</key>
             <dict>
-                <key>pattern</key>
-                <string>%RECIPE_CACHE_DIR%/payload/Contents/Resources/*.icns</string>
+                <!-- Mappen som inneholder Contents/, Info.plist osv. -->
+                <key>app_file</key>
+                <string>%RECIPE_CACHE_DIR%/payload</string>
+                <!-- Brukes bare til å gi PNG-fila et navn -->
+                <key>name</key>
+                <string>%NAME%</string>
             </dict>
         </dict>
 
@@ -125,9 +131,9 @@
                 <key>displayname</key>
                 <string>%display_name%</string>
 
-                <!-- Ikon fra .icns-fil funnet over -->
+                <!-- PNG-ikonet generert av IntuneAppIconGetter -->
                 <key>icon</key>
-                <string>%found_filename%</string>
+                <string>%icon_file_path%</string>
 
                 <key>publisher</key>
                 <string>%developer%</string>
