@@ -94,23 +94,37 @@
             </dict>
         </dict>
 
-        <!-- 5: Ekstraher ikon til PNG med IntuneAppIconGetter -->
+        <!-- 5: Kopiér payload til en .app-katalog, så IntuneAppIconGetter blir fornøyd -->
         <dict>
             <key>Processor</key>
-            <!-- hvis denne ikke funker, prøv bare "IntuneAppIconGetter" -->
-            <string>com.github.almenscorner.intune-upload.processors/IntuneAppIconGetter</string>
+            <string>Copier</string>
             <key>Arguments</key>
             <dict>
-                <!-- Mappen som inneholder Contents/, Info.plist osv. -->
-                <key>app_file</key>
+                <key>source_path</key>
                 <string>%RECIPE_CACHE_DIR%/payload</string>
-                <!-- Brukes bare til å gi PNG-fila et navn -->
+                <key>destination_path</key>
+                <string>%RECIPE_CACHE_DIR%/GlobalProtect.app</string>
+                <key>overwrite</key>
+                <true/>
+            </dict>
+        </dict>
+
+        <!-- 6: Ekstraher ikon til PNG med IntuneAppIconGetter -->
+        <dict>
+            <key>Processor</key>
+            <string>IntuneAppIconGetter</string>
+            <!-- hvis den ikke finnes slik, bruk:
+                 com.github.almenscorner.intune-upload.processors/IntuneAppIconGetter -->
+            <key>Arguments</key>
+            <dict>
+                <key>app_file</key>
+                <string>%RECIPE_CACHE_DIR%/GlobalProtect.app</string>
                 <key>name</key>
                 <string>%NAME%</string>
             </dict>
         </dict>
 
-        <!-- 6: Last opp den originale PKG-en til Intune -->
+        <!-- 7: Last opp den originale PKG-en til Intune -->
         <dict>
             <key>Processor</key>
             <string>com.github.almenscorner.intune-upload.processors/IntuneAppUploader</string>
