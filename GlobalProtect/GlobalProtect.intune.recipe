@@ -4,10 +4,8 @@
 <dict>
     <key>Description</key>
     <string>Uses peshay's download recipe to fetch GlobalProtect and packages it for Intune upload.</string>
-
     <key>Identifier</key>
     <string>com.github.gahel.intune.GlobalProtect</string>
-
     <key>Input</key>
     <dict>
         <key>NAME</key>
@@ -16,7 +14,6 @@
         <string>vpn.example.com</string>
         <key>PLATFORM</key>
         <string>mac</string>
-
         <key>categories</key>
         <array>
             <string>Security</string>
@@ -28,16 +25,12 @@
         <key>display_name</key>
         <string>GlobalProtect</string>
     </dict>
-
     <key>MinimumVersion</key>
     <string>0.6.1</string>
-
     <key>ParentRecipe</key>
     <string>com.github.peshay.download.GlobalProtect</string>
-
     <key>Process</key>
     <array>
-        <!-- 1: Pakk ut flat pkg til %RECIPE_CACHE_DIR%/unpack -->
         <dict>
             <key>Processor</key>
             <string>FlatPkgUnpacker</string>
@@ -49,8 +42,6 @@
                 <string>%RECIPE_CACHE_DIR%/unpack</string>
             </dict>
         </dict>
-
-        <!-- 2: Finn gp.pkg inne i unpack/ -->
         <dict>
             <key>Processor</key>
             <string>FileFinder</string>
@@ -60,8 +51,6 @@
                 <string>%RECIPE_CACHE_DIR%/unpack/gp.pkg</string>
             </dict>
         </dict>
-
-        <!-- 3: Pakk ut payload fra gp.pkg til %RECIPE_CACHE_DIR%/payload -->
         <dict>
             <key>Processor</key>
             <string>PkgPayloadUnpacker</string>
@@ -75,8 +64,6 @@
                 <true/>
             </dict>
         </dict>
-
-        <!-- 4: Les Info.plist direkte fra payload/Contents/Info.plist -->
         <dict>
             <key>Processor</key>
             <string>PlistReader</string>
@@ -93,8 +80,6 @@
                 </dict>
             </dict>
         </dict>
-
-        <!-- 5: Kopiér payload til en .app-katalog, så IntuneAppIconGetter blir fornøyd -->
         <dict>
             <key>Processor</key>
             <string>Copier</string>
@@ -108,13 +93,9 @@
                 <true/>
             </dict>
         </dict>
-
-        <!-- 6: Ekstraher ikon til PNG med IntuneAppIconGetter -->
         <dict>
             <key>Processor</key>
             <string>com.github.almenscorner.intune-upload.processors/IntuneAppIconGetter</string>
-            <!-- hvis den ikke finnes slik, bruk:
-                 com.github.almenscorner.intune-upload.processors/IntuneAppIconGetter -->
             <key>Arguments</key>
             <dict>
                 <key>app_file</key>
@@ -123,32 +104,23 @@
                 <string>%NAME%</string>
             </dict>
         </dict>
-
-        <!-- 7: Last opp den originale PKG-en til Intune -->
         <dict>
             <key>Processor</key>
             <string>com.github.almenscorner.intune-upload.processors/IntuneAppUploader</string>
             <key>Arguments</key>
             <dict>
-                <!-- PKG som peshay-recipen lastet ned -->
                 <key>app_file</key>
                 <string>%pathname%</string>
-
-                <!-- Metadata hentet fra Info.plist -->
                 <key>bundleId</key>
                 <string>%BUNDLE_ID%</string>
                 <key>bundleVersion</key>
                 <string>%version%</string>
-
                 <key>description</key>
                 <string>%description%</string>
                 <key>displayname</key>
                 <string>%display_name%</string>
-
-                <!-- PNG-ikonet generert av IntuneAppIconGetter -->
                 <key>icon</key>
                 <string>%icon_file_path%</string>
-
                 <key>publisher</key>
                 <string>%developer%</string>
                 <key>version</key>
