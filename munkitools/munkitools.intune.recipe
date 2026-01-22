@@ -1,0 +1,28 @@
+{
+    "Identifier": "com.github.gahel.munkitools.intune",
+    "Description": "Intune recipe for MunkiTools deployment.",
+    "Input": {
+        "NAME": "munkitools",
+        "VERSION": null,
+        "DOWNLOAD_URL": null,
+        "PKG": null
+    },
+    "Process": [
+        {
+            "Processor": "URLDownloader",
+            "Arguments": {
+                "url": "%DOWNLOAD_URL%",
+                "filename": "%NAME%-%VERSION%.pkg"
+            }
+        },
+        {
+            "Processor": "IntuneWinPackageCreator",
+            "Arguments": {
+                "pkg_path": "%pathname%",
+                "output_path": "%RECIPE_CACHE_DIR%/intunewin",
+                "display_name": "%NAME% %VERSION%"
+            }
+        }
+    ],
+    "ParentRecipe": "munkitools.pkg.recipe"
+}
