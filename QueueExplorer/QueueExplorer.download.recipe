@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Description</key>
+	<string>Downloads the latest Apple Silicon version of QueueExplorer (message queue management tool from Cogin)</string>
+	<key>Identifier</key>
+	<string>com.github.gahel.download.QueueExplorer</string>
+	<key>Input</key>
+	<dict>
+		<key>NAME</key>
+		<string>QueueExplorer</string>
+	</dict>
+	<key>MinimumVersion</key>
+	<string>2.3</string>
+	<key>Process</key>
+	<array>
+		<dict>
+			<key>Processor</key>
+			<string>URLTextSearcher</string>
+			<key>Arguments</key>
+			<dict>
+				<key>url</key>
+				<string>https://www.cogin.com/mq/download.php</string>
+				<key>re_pattern</key>
+				<string>href="(?P&lt;download_path&gt;/download/mq/download\.php\?file=(?P&lt;version&gt;[0-9.]+)%2FQueueExplorer-[0-9.]+-mac-arm64\.dmg)"</string>
+			</dict>
+		</dict>
+		<dict>
+			<key>Processor</key>
+			<string>URLDownloader</string>
+			<key>Arguments</key>
+			<dict>
+				<key>url</key>
+				<string>https://www.cogin.com%download_path%</string>
+				<key>filename</key>
+				<string>%NAME%-%version%-mac-arm64.dmg</string>
+			</dict>
+		</dict>
+		<dict>
+			<key>Processor</key>
+			<string>EndOfCheckPhase</string>
+		</dict>
+		<dict>
+			<key>Processor</key>
+			<string>CodeSignatureVerifier</string>
+			<key>Arguments</key>
+			<dict>
+				<key>input_path</key>
+				<string>%pathname%/QueueExplorer.app</string>
+				<key>requirement</key>
+				<string>identifier "com.cogin.queueexplorer" and anchor apple generic and certificate 1[field.1.2.840.113635.100.6.2.6] /* exists */ and certificate leaf[field.1.2.840.113635.100.6.1.13] /* exists */ and certificate leaf[subject.OU] = HQ9L82PHWN</string>
+			</dict>
+		</dict>
+	</array>
+</dict>
+</plist>

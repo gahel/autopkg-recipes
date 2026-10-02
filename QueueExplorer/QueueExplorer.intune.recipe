@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Description</key>
+	<string>Downloads the latest Apple Silicon version of QueueExplorer, builds a pkg and uploads it to Intune.</string>
+	<key>Identifier</key>
+	<string>com.github.gahel.intune.QueueExplorer</string>
+	<key>Input</key>
+	<dict>
+		<key>NAME</key>
+		<string>QueueExplorer</string>
+		<key>categories</key>
+		<array>
+			<string>Developer Tools</string>
+		</array>
+		<key>description</key>
+		<string>QueueExplorer is a management tool for message queues: browse, copy, move, edit and resend messages in RabbitMQ, Azure Service Bus, ActiveMQ and MSMQ. Apple Silicon only.</string>
+		<key>developer</key>
+		<string>Cogin</string>
+		<key>display_name</key>
+		<string>QueueExplorer</string>
+		<key>information_url</key>
+		<string>https://www.cogin.com/mq/</string>
+	</dict>
+	<key>MinimumVersion</key>
+	<string>2.3</string>
+	<key>ParentRecipe</key>
+	<string>com.github.gahel.pkg.QueueExplorer</string>
+	<key>Process</key>
+	<array>
+		<dict>
+			<key>Processor</key>
+			<string>com.github.almenscorner.intune-upload.processors/IntuneAppIconGetter</string>
+			<key>Arguments</key>
+			<dict>
+				<key>app_file</key>
+				<string>%pathname%</string>
+				<key>name</key>
+				<string>%NAME%</string>
+			</dict>
+		</dict>
+		<dict>
+			<key>Processor</key>
+			<string>com.github.almenscorner.intune-upload.processors/IntuneAppUploader</string>
+			<key>Arguments</key>
+			<dict>
+				<key>app_file</key>
+				<string>%pkg_path%</string>
+				<key>bundleId</key>
+				<string>%BUNDLE_ID%</string>
+				<key>bundleVersion</key>
+				<string>%version%</string>
+				<key>description</key>
+				<string>%description%</string>
+				<key>displayname</key>
+				<string>%display_name%</string>
+				<key>icon</key>
+				<string>%icon_file_path%</string>
+				<key>information_url</key>
+				<string>%information_url%</string>
+				<key>minimumSupportedOperatingSystem</key>
+				<string>v12_0</string>
+				<key>publisher</key>
+				<string>%developer%</string>
+				<key>version</key>
+				<string>%version%</string>
+			</dict>
+		</dict>
+	</array>
+</dict>
+</plist>
