@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Description</key>
+	<string>Downloads the latest Microsoft Global Secure Access Client and uploads it to Intune.</string>
+	<key>Identifier</key>
+	<string>com.github.gahel.intune.GlobalSecureAccess</string>
+	<key>Input</key>
+	<dict>
+		<key>NAME</key>
+		<string>GlobalSecureAccess</string>
+		<key>categories</key>
+		<array>
+			<string>Security</string>
+		</array>
+		<key>description</key>
+		<string>Microsoft Global Secure Access Client (Microsoft Entra Internet Access / Private Access). Also installs Microsoft AutoUpdate if missing. Requires the GSA system extension and network extension profile.</string>
+		<key>developer</key>
+		<string>Microsoft Corporation</string>
+		<key>display_name</key>
+		<string>Global Secure Access Client</string>
+		<key>information_url</key>
+		<string>https://learn.microsoft.com/entra/global-secure-access/how-to-install-macos-client</string>
+	</dict>
+	<key>MinimumVersion</key>
+	<string>2.3</string>
+	<key>ParentRecipe</key>
+	<string>com.github.gahel.download.GlobalSecureAccess</string>
+	<key>Process</key>
+	<array>
+		<dict>
+			<key>Processor</key>
+			<string>com.github.almenscorner.intune-upload.processors/IntuneAppIconGetter</string>
+			<key>Arguments</key>
+			<dict>
+				<key>app_file</key>
+				<string>%RECIPE_CACHE_DIR%/payload/Global Secure Access Client.app</string>
+				<key>name</key>
+				<string>%NAME%</string>
+			</dict>
+		</dict>
+		<dict>
+			<key>Processor</key>
+			<string>com.github.almenscorner.intune-upload.processors/IntuneAppUploader</string>
+			<key>Arguments</key>
+			<dict>
+				<key>app_file</key>
+				<string>%pathname%</string>
+				<key>bundleId</key>
+				<string>%BUNDLE_ID%</string>
+				<key>bundleVersion</key>
+				<string>%version%</string>
+				<key>description</key>
+				<string>%description%</string>
+				<key>displayname</key>
+				<string>%display_name%</string>
+				<key>icon</key>
+				<string>%icon_file_path%</string>
+				<key>information_url</key>
+				<string>%information_url%</string>
+				<key>publisher</key>
+				<string>%developer%</string>
+				<key>version</key>
+				<string>%version%</string>
+			</dict>
+		</dict>
+	</array>
+</dict>
+</plist>
